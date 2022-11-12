@@ -5,16 +5,17 @@
     name: devops
     build:
      path: /var/lib/jenkins/workspace/pip-liv
-     pull: no
+     pull : no 
     source: build
     state: present
     force_source: true
 - name: run container docker
   docker_container:
-    name: myapp_container
+    name: myapp-container
     image: devops:latest
-    state: started
-    recreate: true
-    ports:
+    state : started 
+    recreate : true 
+    ports : 
      - "4200:80"
+
 

@@ -15,7 +15,7 @@ pipeline{
             }
     
      
-/*stage('Build') {
+stage('Build') {
              steps{
                 script{
                     sh " ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
@@ -28,7 +28,7 @@ pipeline{
                     sh "ansible-playbook ansible/docker.yml -i ansible/inventory/host.yml "
                 }
             }
-        }*/
+        }
  stage('push docker hub') {
              steps{
                 script{
